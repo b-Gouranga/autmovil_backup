@@ -1,6 +1,8 @@
 package com.jwtexample.demo.entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
@@ -12,6 +14,7 @@ import lombok.*;
 @Entity
 public class Boat {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long boatId;
     private long ownerId;
     private String boatName;
@@ -19,4 +22,5 @@ public class Boat {
     private String contact;
     private String capacity;
     private String boatType;
+
 }

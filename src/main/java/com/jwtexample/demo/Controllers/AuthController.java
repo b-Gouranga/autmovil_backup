@@ -34,6 +34,7 @@ public class AuthController {
 
     private Logger logger = LoggerFactory.getLogger(AuthController.class);
 
+
 //doAuth done the authentication
 
     @PostMapping("/login")
@@ -42,7 +43,7 @@ public class AuthController {
         this.doAuthenticate(request.getEmail(), request.getPassword());
 
 
-        UserDetails userDetails = userDetailsService.loadUserByUsername(request.getEmail());
+        UserDetails userDetails =userDetailsService.loadUserByUsername(request.getEmail());
         String token = this.helper.generateToken(userDetails);
 
         JwtResponse response = JwtResponse.builder()

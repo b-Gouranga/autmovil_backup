@@ -48,6 +48,7 @@ public class JwtHelper {
     //generate token for user
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
+
         return doGenerateToken(claims, userDetails.getUsername());
     }
 
