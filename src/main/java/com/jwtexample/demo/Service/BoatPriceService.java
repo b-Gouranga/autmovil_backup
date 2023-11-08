@@ -21,6 +21,4 @@ public class BoatPriceService {
         boatPriceRepository.save(newprice);
         return newprice;
     }
-
-
 }

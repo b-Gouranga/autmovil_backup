@@ -18,12 +18,11 @@ public class BoatController {
     @GetMapping("/get_price")
     private List<BoatPrice> getPrice(){return this.boatPriceService.getPrice();}
 
+
     @PostMapping(path="/new_boat_price",consumes= "application/json")
     public BoatPrice addBoatPrice(@RequestBody BoatPrice newprice)
     {
         return this.boatPriceService.addBoatPrice(newprice);
     }
-
-
 
 }
